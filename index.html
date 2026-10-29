@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astronaut Profile | Monochromatic Space Logs</title>
+    <!-- Font Space Grotesk & JetBrains Mono dari Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Space Warp Background Canvas -->
+    <canvas id="starfield"></canvas>
+
+    <!-- Navigation Header -->
+    <header class="hud-header">
+        <div class="logo">
+            <span class="pulse-dot"></span> PROFILE // KIKI RAMADHAN
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#hero">// 01. BASE</a></li>
+                <li><a href="#about">// 02. PROFILE</a></li>
+                <li><a href="#skills">// 03. SKILLS</a></li>
+                <li><a href="#missions">// 04. MISSIONS</a></li>
+                <li><a href="#contact">// 05. TRANSMIT</a></li>
+            </ul>
+        </nav>
+        <button id="soundToggle" class="hud-btn-sm" title="Toggle Transmission Sound">
+            SFX: <span id="soundStatus">OFF</span>
+        </button>
+    </header>
+
+    <!-- Main Container -->
+    <main class="container">
+
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-text">
+                <div class="badge">SYS_STATUS: ONLINE</div>
+                <h1>KIKI <br><span class="glitch-text" data-text="ASTRONAUT">RAMADHAN</span></h1>
+                <p class="subtitle">CREATIVE DEVELOPER & SPACE EXPLORER</p>
+                <p class="desc">
+                        Seorang mahasiswa unikom yang sedang mendalami ilmu informatika dnegan giat dan bersungguh sungguh dan juga membuat relasi dan juga memperdalam skill dengan mempelajari hal baru 
+                </p>
+                <div class="cta-group">
+                    <a href="#missions" class="hud-btn primary">LIHAT MISI PROYEK</a>
+                    <a href="#contact" class="hud-btn secondary">KIRIM TRANSMISI</a>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="astronaut-wrapper">
+                    <!-- SVG Vector Astronaut Monochrome -->
+                    <svg class="astronaut-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2a8 8 0 0 0-8 8v3a8 8 0 0 0 8 8 8 8 0 0 0 8-8v-3a8 8 0 0 0-8-8z"/>
+                        <path d="M9 10a3 3 0 0 1 6 0v2a3 3 0 0 1-6 0v-2z"/>
+                        <path d="M12 19v3"/>
+                        <path d="M8 22h8"/>
+                        <path d="M4 11H2"/>
+                        <path d="M22 11h-2"/>
+                    </svg>
+                    <div class="orbit-ring"></div>
+                    <div class="orbit-ring secondary"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="hud-panel">
+            <div class="panel-header">
+                <h2>// 02. PROFILE SPECS</h2>
+                <span class="panel-id">ID: ASTRO-9982</span>
+            </div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <h3>BIOGRAFI MELINTASI GALAXY DAN MENCARI CAKRAWALA</h3>
+                    <p>
+                        Berbasis di Bumi, berfokus pada pembangunan infrastruktur antarmuka digital yang tangguh, efisien, dan minimalis. Mengkombinasikan kecepatan JavaScript modern dengan arsitektur CSS bersih.
+                    </p>
+                </div>
+                <div class="specs-list">
+                    <div class="spec-item">
+                        <span class="spec-label">LOKASI SEKTOR:</span>
+                        <span class="spec-value">EARTH / SECTOR 07</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">PENGALAMAN:</span>
+                        <span class="spec-value">5+ TAHUN CAHAYA</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">METODE:</span>
+                        <span class="spec-value">RESPONSIVE & CLEAN CODE</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">STATUS OKSIGEN:</span>
+                        <span class="spec-value">100% NOMINAL</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="hud-panel">
+            <div class="panel-header">
+                <h2>// 03. SYSTEM CAPABILITIES</h2>
+                <span class="panel-id">DIAGNOSTIC OK</span>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-info">
+                        <span class="skill-name">HTML5 / ARCHITECTURE</span>
+                        <span class="skill-pct">95%</span>
+                    </div>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 95%;"></div></div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-info">
+                        <span class="skill-name">CSS3 / MONO STYLES</span>
+                        <span class="skill-pct">90%</span>
+                    </div>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 90%;"></div></div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-info">
+                        <span class="skill-name">JAVASCRIPT / CORE ENGINE</span>
+                        <span class="skill-pct">85%</span>
+                    </div>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 85%;"></div></div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-info">
+                        <span class="skill-name">UI/UX MONOCHROME DESIGN</span>
+                        <span class="skill-pct">88%</span>
+                    </div>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 88%;"></div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Missions Section -->
+        <section id="missions" class="hud-panel">
+            <div class="panel-header">
+                <h2>// 04. LOGGED MISSIONS (PROJECTS)</h2>
+                <span class="panel-id">ARCHIVE CLEAR</span>
+            </div>
+
+            <div class="missions-grid">
+                <!-- Mission 1 -->
+                <div class="mission-card">
+                    <div class="mission-tag">MISSION #01</div>
+                    <h3>SYSTEM ORBIT DASHBOARD</h3>
+                    <p>Antarmuka kontrol luar angkasa dengan visualisasi data real-time berbasis JavaScript murni.</p>
+                    <div class="tech-stack">
+                        <span>HTML</span><span>CSS</span><span>JS</span>
+                    </div>
+                </div>
+
+                <!-- Mission 2 -->
+                <div class="mission-card">
+                    <div class="mission-tag">MISSION #02</div>
+                    <h3>LUNAR MONOCHROME UI</h3>
+                    <p>Desain sistem antarmuka berbasis monokrom kontras tinggi untuk pengamatan malam hari.</p>
+                    <div class="tech-stack">
+                        <span>DESIGN</span><span>CSS GRID</span>
+                    </div>
+                </div>
+
+                <!-- Mission 3 -->
+                <div class="mission-card">
+                    <div class="mission-tag">MISSION #03</div>
+                    <h3>DEEP SPACE ROUTER</h3>
+                    <p>Algoritma navigasi rute tercepat antar stasiun luar angkasa.</p>
+                    <div class="tech-stack">
+                        <span>ALGORITHM</span><span>NODE.JS</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="hud-panel">
+            <div class="panel-header">
+                <h2>// 05. TRANSMIT MESSAGE</h2>
+                <span class="panel-id">FREQ: 142.00 MHz</span>
+            </div>
+            
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <label for="name">ID PEMANGGIL / NAMA:</label>
+                    <input type="text" id="name" required placeholder="Contoh: Capt. John Doe">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">ALAMAT FREKUENSI / EMAIL:</label>
+                    <input type="email" id="email" required placeholder="nama@stasiun.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">ISAN TRANSMISI / PESAN:</label>
+                    <textarea id="message" rows="5" required placeholder="Tuliskan pesan Anda..."></textarea>
+                </div>
+
+                <button type="submit" class="hud-btn primary full-width">KIRIM KANALS TRANSMISI</button>
+                <div id="formStatus" class="form-status"></div>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="hud-footer">
+        <p>PROFILE KIKI RAMADHAN SINCE 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
